@@ -7,7 +7,8 @@ workflows:
         PACKAGE_NAME: "com.seuprojeto.app"   # altere para o ID do seu app
         BUILD_DIR: "android"
       android_signing:
-        - keystore_reference: keystore
+        - keystore: keystore                 # ✅ campo correto
+      java: 17
     scripts:
       - name: Limpar e preparar build
         script: |
